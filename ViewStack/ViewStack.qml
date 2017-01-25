@@ -16,7 +16,7 @@ Item {
       stack: [ "view1", "view2" ]
 
       stack: [
-        { name: "view1",
+        { title: "view1",
           options: {
            /// ...
           },
@@ -24,7 +24,7 @@ Item {
           pushExit: idle
         },
         {
-          name: "view2",
+          title: "view2",
           options: {
            /// ...
           }

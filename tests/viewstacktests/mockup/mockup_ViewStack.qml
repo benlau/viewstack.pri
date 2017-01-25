@@ -35,7 +35,7 @@ Item {
         anchors.fill: parent
 
         stack: ([
-            { name: "p1"}
+            { title: "p1"}
         ])
 
         model: Item {
@@ -64,18 +64,18 @@ Item {
             name: "p1,p2"
             PropertyChanges {
                 target: stack
-                stack: [{name: "p1"},
-                        {name: "p2"}]
+                stack: [{title: "p1"},
+                        {title: "p2"}]
             }
         },
         State {
             name: "p1,p2,p3"
             PropertyChanges {
                 target: stack
-                stack: [{name: "p1"},
-                        {name: "p2"},
+                stack: [{title: "p1"},
+                        {title: "p2"},
                         {
-                            name: "p3",
+                            title: "p3",
                             pushEnter: fadeIn,
                             pushExit: "freeze",
                             popExit: "fadeOut",
@@ -87,15 +87,15 @@ Item {
             name: "p3,p2"
             PropertyChanges {
                 target: stack
-                stack: [{name: "p3"},
-                        {name: "p2"}]
+                stack: [{title: "p3"},
+                        {title: "p2"}]
             }
         },
         State {
             name: "p3"
             PropertyChanges {
                 target: stack
-                stack: [{name: "p3"}]
+                stack: [{title: "p3"}]
             }
         }
     ]

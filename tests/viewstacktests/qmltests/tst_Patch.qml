@@ -18,10 +18,10 @@ Item {
                 test_pushEnter: "freeze"
             };
 
-            compare(Patch.normalize("test"), [{ name: "test"}]);
-            compare(Patch.normalize(["test"]), [{ name: "test"}]);
+            compare(Patch.normalize("test"), [{ title: "test"}]);
+            compare(Patch.normalize(["test"]), [{ title: "test"}]);
 
-            compare(Patch.normalize(["test"], model), [{ name: "test", pushEnter: "freeze"}]);
+            compare(Patch.normalize(["test"], model), [{ title: "test", pushEnter: "freeze"}]);
 
         }
 
@@ -46,7 +46,7 @@ Item {
         }
 
         function test_push() {
-            compare(Patch.create([], ["add"]), {op: "push", views: [ {name: "add"}], transitions:{}});
+            compare(Patch.create([], ["add"]), {op: "push", views: [ {title: "add"}], transitions:{}});
         }
 
         function test_replace() {
@@ -55,8 +55,8 @@ Item {
             var result = {
                 op: "replace",
                 views: [
-                    {name: "b1"},
-                    {name: "b2"}
+                    {title: "b1"},
+                    {title: "b2"}
                 ],
                 transitions: {}
             };
@@ -81,8 +81,8 @@ Item {
             var result = {
                 op: "clear",
                 views: [
-                    {name: "b1"},
-                    {name: "b2"}
+                    {title: "b1"},
+                    {title: "b2"}
                 ],
                 transitions: {}
             };
@@ -97,7 +97,7 @@ Item {
                 }
             }
             n = Patch.validate(model, n);
-            compare(JSON.stringify(n), JSON.stringify([{name: "a1"}]));
+            compare(JSON.stringify(n), JSON.stringify([{title: "a1"}]));
         }
 
     }

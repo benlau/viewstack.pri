@@ -7,14 +7,14 @@ function _normalize(input, model) {
 
     if (typeof res === "string") {
         res = {
-            name: input
+            title: input
         }
     }
 
     if (typeof model === "object") {
         for (var i in transitions) {
             var trans = transitions[i];
-            var modelTrans = res.name + "_" + trans;
+            var modelTrans = res.title + "_" + trans;
 
             if (!res.hasOwnProperty(trans) &&
                 model.hasOwnProperty(modelTrans)) {
@@ -41,7 +41,7 @@ function normalize(input, model) {
 function _diff(prev, next) {
     var s = 0;
     for (var i = 0 ; i < prev.length && i < next.length;i++) {
-        if (prev[i].name !== next[i].name) {
+        if (prev[i].title !== next[i].title) {
             break;
         }
         s++;
@@ -67,7 +67,7 @@ function args(model, views) {
     for (var i in views) {
         var v = views[i];
 
-        res.push(model[v.name]);
+        res.push(model[v.title]);
         res.push(v.options);
     }
 
@@ -152,8 +152,8 @@ function validate(model, nView) {
 
     for (var i = 0; i < nView.length; i++) {
         var view = nView[i];
-        if (!model.hasOwnProperty(view.name)) {
-            console.warn("ViewStack: Unknown view: " + view.name);
+        if (!model.hasOwnProperty(view.title)) {
+            console.warn("ViewStack: Unknown view: " + view.title);
         } else {
             res.push(view);
         }
