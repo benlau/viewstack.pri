@@ -162,6 +162,7 @@ Item {
 
     function refresh() {
         var viewsNormalized = Patch.normalize(stack, component.model);
+        viewsNormalized = Patch.validate(model, viewsNormalized);
         var patch = Patch.create(priv.stack, viewsNormalized);
         priv.stack = viewsNormalized;
 

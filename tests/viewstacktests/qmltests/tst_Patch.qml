@@ -89,5 +89,16 @@ Item {
             compare(Patch.create(prev,next), result);
         }
 
+        function test_validate() {
+            var views = ["common","a1","a2"];
+            var n = Patch.normalize(views);
+            var model = {
+                "a1": {
+                }
+            }
+            n = Patch.validate(model, n);
+            compare(JSON.stringify(n), JSON.stringify([{name: "a1"}]));
+        }
+
     }
 }

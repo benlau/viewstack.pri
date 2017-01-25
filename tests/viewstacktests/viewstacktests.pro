@@ -19,7 +19,8 @@ DEFINES += SRCDIR=\\\"$$PWD/\\\"
 include(vendor/vendor.pri)
 include(../../viewstack.pri)
 DISTFILES +=     qpm.json \    
-    qmltests/tst_Patch.qml
+    qmltests/tst_Patch.qml \
+    mockup/mockup_ViewStack.qml
 
 HEADERS +=    
 

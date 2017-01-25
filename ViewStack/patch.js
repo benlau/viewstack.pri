@@ -146,3 +146,17 @@ function applyTransition(stackView,config, transitionTable) {
         }
     }
 }
+
+function validate(model, nView) {
+    var res = [];
+
+    for (var i = 0; i < nView.length; i++) {
+        var view = nView[i];
+        if (!model.hasOwnProperty(view.name)) {
+            console.warn("ViewStack: Unknown view: " + view.name);
+        } else {
+            res.push(view);
+        }
+    }
+    return res;
+}
