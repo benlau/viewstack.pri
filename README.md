@@ -17,19 +17,15 @@ Example:
         clip: true
         anchors.fill: parent
 
-        stack: (["page1" , "page2]);
+        stack: ["page1" , "page2"]
 
         model: Item {
-            property Component page1 : Component {
-                Rectangle {
+            property Component page1 : Rectangle {
                     color: "red"
-                }
             }
 
-            property Component page2: Component {
-                Rectangle {
+            property Component page2: Rectangle {
                     color: "green"
-                }
             }
         }
         
