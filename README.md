@@ -33,7 +33,7 @@ Example:
             }
         }
         
-        page2_pushEnter : Transition {
+        property Transition page2_pushEnter : Transition {
            /// ...
         }
 
