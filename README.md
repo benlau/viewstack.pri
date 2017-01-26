@@ -14,9 +14,6 @@ Example:
 ```
 
     ViewStack {
-        clip: true
-        anchors.fill: parent
-
         stack: ["page1" , "page2"]
 
         model: Item {
