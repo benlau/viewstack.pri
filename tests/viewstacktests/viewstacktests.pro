@@ -20,7 +20,8 @@ include(vendor/vendor.pri)
 include(../../viewstack.pri)
 DISTFILES +=     qpm.json \    
     qmltests/tst_Patch.qml \
-    mockup/mockup_ViewStack.qml
+    mockup/mockup_ViewStack.qml \
+    mockup/mockup_TransitionDemo.qml
 
 HEADERS +=    
 

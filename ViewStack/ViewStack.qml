@@ -103,6 +103,30 @@ Item {
             }
         }
 
+        property Transition growFadeIn: Transition {
+
+            PropertyAction {
+                property: "transformOrigin"
+                value: Item.Center
+            }
+
+            NumberAnimation {
+                from: 0.9
+                to: 1
+                property: "scale"
+                duration: 100
+                easing.type: Easing.Linear
+            }
+
+            NumberAnimation {
+                property: "opacity"
+                from: 0
+                to: 1
+                duration: 100
+                easing.type: Easing.Linear
+            }
+        }
+
         property Transition fadeOut : Transition {
             NumberAnimation {
                 property: "opacity"
@@ -113,10 +137,35 @@ Item {
             }
         }
 
+        property Transition shrinkFadeOut: Transition {
+
+            PropertyAction {
+                property: "transformOrigin"
+                value: Item.Center
+            }
+
+            NumberAnimation {
+                from: 1
+                to: 0.9
+                property: "scale"
+                duration: 100
+                easing.type: Easing.OutQuad
+            }
+
+            NumberAnimation {
+                property: "opacity"
+                from: 1
+                to: 0
+                duration: 100
+                easing.type: Easing.Linear
+            }
+        }
+
+
         property Transition freeze: Transition {
 
             PauseAnimation {
-                duration: 600
+                duration: 100
             }
         }
 

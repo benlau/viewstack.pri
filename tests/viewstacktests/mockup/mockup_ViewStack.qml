@@ -34,27 +34,21 @@ Item {
         clip: true
         anchors.fill: parent
 
-        stack: ([
+        stack: [
             { title: "p1"}
-        ])
+        ]
 
         model: Item {
-            property Component p1 : Component {
-                Rectangle {
+            property Component p1 : Rectangle {
                     color: "red"
-                }
             }
 
-            property Component p2: Component {
-                Rectangle {
+            property Component p2:  Rectangle {
                     color: "green"
-                }
             }
 
-            property Component p3: Component {
-                Rectangle {
+            property Component p3: Rectangle {
                     color: "blue"
-                }
             }
         }
 
