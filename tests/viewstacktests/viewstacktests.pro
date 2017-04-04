@@ -21,8 +21,11 @@ include(../../viewstack.pri)
 DISTFILES +=     qpm.json \    
     qmltests/tst_Patch.qml \
     mockup/mockup_ViewStack.qml \
-    mockup/mockup_TransitionDemo.qml
+    mockup/mockup_TransitionDemo.qml \
+    mockup/mockup_AsyncLoading.qml
 
 HEADERS +=    
+
+DEFINES += QUICK_TEST_SOURCE_DIR=\\\"$$PWD\\\"
 
 write_file(qmlimport.path, QML_IMPORT_PATH)

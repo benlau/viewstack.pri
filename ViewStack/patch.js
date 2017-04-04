@@ -61,6 +61,7 @@ function _pickTransitions(item) {
     return res;
 }
 
+/// Construct arguments according to the model for StackView.push/replace
 function args(model, views) {
     var res = [];
 

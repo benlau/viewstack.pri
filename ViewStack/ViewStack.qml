@@ -3,6 +3,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.0
 import "./patch.js" as Patch
+import "./incubator.js" as Incubator
 
 Item {
     id: component
@@ -223,7 +224,19 @@ Item {
 
         /* Update StackView */
         if (patch.op === "push") {
-            stackView.push.call(null, Patch.args(model, patch.views));
+
+            if (patch.views[0].asynchronous === true) {
+                //@FIXME It could only load a single page
+                //@TODO Support multiple page asynchronous pushing and replace
+                var args = Patch.args(model, patch.views);
+                var incubator = Incubator.create(null, args[0], args[1]);
+                incubator.addListener(function() {
+                    stackView.push(incubator.component);
+                });
+                incubator.create();
+            } else {
+                stackView.push.call(null, Patch.args(model, patch.views));
+            }
         } else if (patch.op === "pop"){
             while (patch.count--) {
                 stackView.pop();

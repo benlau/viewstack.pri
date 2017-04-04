@@ -3,5 +3,6 @@
         <file>ViewStack/patch.js</file>
         <file>ViewStack/ViewStack.qml</file>
         <file>ViewStack/qmldir</file>
+        <file>ViewStack/incubator.js</file>
     </qresource>
 </RCC>

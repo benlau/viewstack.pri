@@ -4,6 +4,11 @@
 #include <signal.h>
 #include <unistd.h>
 #include <TestRunner>
+#include <quicktest.h>
+
+namespace AutoTestRegister {
+    QUICK_TEST_MAIN(QuickTests)
+}
 
 void handleBacktrace(int sig) {
     void *array[100];
