@@ -1,6 +1,6 @@
 {
   "name": "net.efever.viewstack",
-  "description": "",
+  "description": "A Stateful StackView",
   "author": {
     "name": "Ben Lau",
     "email": "xbenlau@gmail.com"

@@ -33,3 +33,8 @@ Example:
     }
 
 ```
+
+Installation
+============
+
+	qpm install net.efever.viewstack
