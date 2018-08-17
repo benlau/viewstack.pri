@@ -10,7 +10,8 @@ Features
  1. Push/pop/replace pages via a state variable. (stack property)
  1. Custom transition effect per page
 
-Example:
+Example 1 - A single usage
+
 ```
 
     ViewStack {
@@ -24,11 +25,14 @@ Example:
             property Component page2: Rectangle {
                     color: "green"
             }
+
+            /// Set the default pushEnter animation for page2
+            property Transition page2_pushEnter : Transition {
+               /// ...
+            }
+
         }
-        
-        property Transition page2_pushEnter : Transition {
-           /// ...
-        }
+
 
     }
 

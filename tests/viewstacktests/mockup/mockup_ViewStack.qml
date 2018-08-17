@@ -1,9 +1,11 @@
 import QtQuick 2.0
-import ViewStack 1.0
+//import ViewStack 1.0
+import "../../../ViewStack"
 
-Item {
+Rectangle {
     width: 480
     height: 640
+    color: "white"
 
     Transition {
         id: fadeIn
@@ -25,7 +27,7 @@ Item {
         }
 
         PauseAnimation {
-            duration: 5000
+            duration: 400
         }
     }
 
@@ -39,8 +41,22 @@ Item {
         ]
 
         model: Item {
-            property Component p1 : Rectangle {
+
+            property Component p1 : Item {
+                opacity: 0.2
+
+                Rectangle {
+                    anchors.fill: parent
                     color: "red"
+                }
+
+                Rectangle {
+                    width: 100
+                    height: parent.height
+                    color: "white"
+                    opacity: 0.5
+                }
+
             }
 
             property Component p2:  Rectangle {

@@ -162,12 +162,12 @@ Item {
             }
         }
 
-
         property Transition freeze: Transition {
 
             PauseAnimation {
-                duration: 100
+                duration: 400
             }
+
         }
 
         /// This move entering view onto the screen from the appropriate side

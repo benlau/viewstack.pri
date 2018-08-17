@@ -22,7 +22,8 @@ DISTFILES +=     qpm.json \
     qmltests/tst_Patch.qml \
     mockup/mockup_ViewStack.qml \
     mockup/mockup_TransitionDemo.qml \
-    mockup/mockup_AsyncLoading.qml
+    mockup/mockup_AsyncLoading.qml \
+    ../../README.md
 
 HEADERS +=    
 
